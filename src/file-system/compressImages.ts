@@ -18,14 +18,14 @@ export const compressImages = async (scan: ScanFS, output: string) => {
            .flatten({ background: '#ffffff' })
             .resize({width: Math.min(2000, Math.ceil(meta.width * d)), height: Math.min(2000, Math.ceil(meta.height * d))})
             .toFormat('jpg')
-            .toFile(to))
+            .toFile(to.split('.png').join('.jpg')))
         }
 
 
         return await sharp(from)
           .flatten({ background: '#ffffff' })
           .toFormat('jpg')
-          .toFile(to.replace('.png', '.jpg'))
+          .toFile(to.split('.png').join('.jpg'))
       })
       .catch(e => {
         console.error('Can not find artPath '+from, to)
