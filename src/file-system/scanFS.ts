@@ -1,5 +1,5 @@
-// eslint-disable-next-line unicorn/filename-case
 import DT from 'directory-tree'
+
 import {UnPromisify} from '../utils/types'
 
 const scanFS = async (input) => {
@@ -30,11 +30,11 @@ const scanFS = async (input) => {
       getProductByName : name => {
           return allProducts.find(p => p.productName.toLowerCase() === name.toLowerCase())
       }
-    }
+    } as any
 
 
 
 }
 
-export type ScanFS = UnPromisify<ReturnType<typeof scanFS>>
+export type ScanFS =any
 export default scanFS

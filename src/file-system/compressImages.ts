@@ -39,7 +39,9 @@ export const compressImages = async (scan: ScanFS, output: string) => {
         const toDir = path.join(output, 'compressed', g.name, p.name)
         await ensureDir(toDir)
           const to = path.join(toDir, f.name)
+          console.log('Compress '+f.path + ' to '+to)
         return await handleImage(f.path, to)
+      
       }))
       all = [...all, ...results]
     }

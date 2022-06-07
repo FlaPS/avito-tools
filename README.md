@@ -17,40 +17,40 @@ oclif example Hello World CLI
 <!-- usage -->
 ```sh-session
 $ npm install -g avito-cli
-$ yp COMMAND
+$ avito COMMAND
 running command...
-$ yp (--version)
-yp-cli/0.0.0 linux-x64 node-v16.14.2
-$ yp --help [COMMAND]
+$ avito (--version)
+avito-cli/0.0.0 linux-x64 node-v16.14.2
+$ avito --help [COMMAND]
 USAGE
-  $ yp COMMAND
+  $ avito COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`yp [FILE]`](#yp-file)
-* [`yp download FILE [OUTPUT]`](#yp-download-file-output)
-* [`yp hello PERSON`](#yp-hello-person)
-* [`yp hello world`](#yp-hello-world)
-* [`yp help [COMMAND]`](#yp-help-command)
-* [`yp plugins`](#yp-plugins)
-* [`yp plugins:install PLUGIN...`](#yp-pluginsinstall-plugin)
-* [`yp plugins:inspect PLUGIN...`](#yp-pluginsinspect-plugin)
-* [`yp plugins:install PLUGIN...`](#yp-pluginsinstall-plugin-1)
-* [`yp plugins:link PLUGIN`](#yp-pluginslink-plugin)
-* [`yp plugins:uninstall PLUGIN...`](#yp-pluginsuninstall-plugin)
-* [`yp plugins:uninstall PLUGIN...`](#yp-pluginsuninstall-plugin-1)
-* [`yp plugins:uninstall PLUGIN...`](#yp-pluginsuninstall-plugin-2)
-* [`yp plugins update`](#yp-plugins-update)
+* [`avito [FILE]`](#avito-file)
+* [`avito build INPUT [OUTPUT]`](#avito-build-input-output)
+* [`avito hello PERSON`](#avito-hello-person)
+* [`avito hello world`](#avito-hello-world)
+* [`avito help [COMMAND]`](#avito-help-command)
+* [`avito plugins`](#avito-plugins)
+* [`avito plugins:install PLUGIN...`](#avito-pluginsinstall-plugin)
+* [`avito plugins:inspect PLUGIN...`](#avito-pluginsinspect-plugin)
+* [`avito plugins:install PLUGIN...`](#avito-pluginsinstall-plugin-1)
+* [`avito plugins:link PLUGIN`](#avito-pluginslink-plugin)
+* [`avito plugins:uninstall PLUGIN...`](#avito-pluginsuninstall-plugin)
+* [`avito plugins:uninstall PLUGIN...`](#avito-pluginsuninstall-plugin-1)
+* [`avito plugins:uninstall PLUGIN...`](#avito-pluginsuninstall-plugin-2)
+* [`avito plugins update`](#avito-plugins-update)
 
-## `yp [FILE]`
+## `avito [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ yp  [FILE] [-n <value>] [-f]
+  $ avito  [FILE] [-n <value>] [-f]
 
 FLAGS
   -f, --force
@@ -60,39 +60,39 @@ DESCRIPTION
   describe the command here
 
 EXAMPLES
-  $ yp
+  $ avito
 ```
 
-_See code: [dist/commands/index.ts](https://github.com/shammasov/yp/blob/v0.0.0/dist/commands/index.ts)_
+_See code: [dist/commands/index.ts](https://github.com/shammasov/avito/blob/v0.0.0/dist/commands/index.ts)_
 
-## `yp download FILE [OUTPUT]`
+## `avito build INPUT [OUTPUT]`
 
-Скачать файлы на печать из списка xls файла
+describe the command here
 
 ```
 USAGE
-  $ yp download [FILE] [OUTPUT]
+  $ avito build [INPUT] [OUTPUT]
 
 ARGUMENTS
-  FILE    [default: артикулы.xlsx] Файл с артикулами
-  OUTPUT  [default: ./На печать] Рабочая папка для записи файлов на печать
+  INPUT   Исх данные
+  OUTPUT  Рабочая папка для записи результата
 
 DESCRIPTION
-  Скачать файлы на печать из списка xls файла
+  describe the command here
 
 EXAMPLES
-  $ yp download ./печать-сегодня.xlsx C:/на печать/
+  $ avito build ./avito-catalog ./avito-generated
 ```
 
-_See code: [dist/commands/download.ts](https://github.com/shammasov/yp/blob/v0.0.0/dist/commands/download.ts)_
+_See code: [dist/commands/build.ts](https://github.com/shammasov/avito/blob/v0.0.0/dist/commands/build.ts)_
 
-## `yp hello PERSON`
+## `avito hello PERSON`
 
 Say hello
 
 ```
 USAGE
-  $ yp hello [PERSON] -f <value>
+  $ avito hello [PERSON] -f <value>
 
 ARGUMENTS
   PERSON  Person to say hello to
@@ -108,15 +108,15 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/shammasov/yp/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/shammasov/avito/blob/v0.0.0/dist/commands/hello/index.ts)_
 
-## `yp hello world`
+## `avito hello world`
 
 Say hello world
 
 ```
 USAGE
-  $ yp hello world
+  $ avito hello world
 
 DESCRIPTION
   Say hello world
@@ -126,13 +126,13 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-## `yp help [COMMAND]`
+## `avito help [COMMAND]`
 
-Display help for yp.
+Display help for avito.
 
 ```
 USAGE
-  $ yp help [COMMAND] [-n]
+  $ avito help [COMMAND] [-n]
 
 ARGUMENTS
   COMMAND  Command to show help for.
@@ -141,18 +141,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for yp.
+  Display help for avito.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
 
-## `yp plugins`
+## `avito plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ yp plugins [--core]
+  $ avito plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -161,18 +161,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ yp plugins
+  $ avito plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
 
-## `yp plugins:install PLUGIN...`
+## `avito plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ yp plugins:install PLUGIN...
+  $ avito plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -194,23 +194,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ yp plugins add
+  $ avito plugins add
 
 EXAMPLES
-  $ yp plugins:install myplugin 
+  $ avito plugins:install myplugin 
 
-  $ yp plugins:install https://github.com/someuser/someplugin
+  $ avito plugins:install https://github.com/someuser/someplugin
 
-  $ yp plugins:install someuser/someplugin
+  $ avito plugins:install someuser/someplugin
 ```
 
-## `yp plugins:inspect PLUGIN...`
+## `avito plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ yp plugins:inspect PLUGIN...
+  $ avito plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -223,16 +223,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ yp plugins:inspect myplugin
+  $ avito plugins:inspect myplugin
 ```
 
-## `yp plugins:install PLUGIN...`
+## `avito plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ yp plugins:install PLUGIN...
+  $ avito plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -254,23 +254,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ yp plugins add
+  $ avito plugins add
 
 EXAMPLES
-  $ yp plugins:install myplugin 
+  $ avito plugins:install myplugin 
 
-  $ yp plugins:install https://github.com/someuser/someplugin
+  $ avito plugins:install https://github.com/someuser/someplugin
 
-  $ yp plugins:install someuser/someplugin
+  $ avito plugins:install someuser/someplugin
 ```
 
-## `yp plugins:link PLUGIN`
+## `avito plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ yp plugins:link PLUGIN
+  $ avito plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -288,16 +288,16 @@ DESCRIPTION
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLES
-  $ yp plugins:link myplugin
+  $ avito plugins:link myplugin
 ```
 
-## `yp plugins:uninstall PLUGIN...`
+## `avito plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ yp plugins:uninstall PLUGIN...
+  $ avito plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -310,17 +310,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ yp plugins unlink
-  $ yp plugins remove
+  $ avito plugins unlink
+  $ avito plugins remove
 ```
 
-## `yp plugins:uninstall PLUGIN...`
+## `avito plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ yp plugins:uninstall PLUGIN...
+  $ avito plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -333,17 +333,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ yp plugins unlink
-  $ yp plugins remove
+  $ avito plugins unlink
+  $ avito plugins remove
 ```
 
-## `yp plugins:uninstall PLUGIN...`
+## `avito plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ yp plugins:uninstall PLUGIN...
+  $ avito plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -356,17 +356,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ yp plugins unlink
-  $ yp plugins remove
+  $ avito plugins unlink
+  $ avito plugins remove
 ```
 
-## `yp plugins update`
+## `avito plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ yp plugins update [-h] [-v]
+  $ avito plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.

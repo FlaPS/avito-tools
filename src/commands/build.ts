@@ -23,7 +23,7 @@ export default class Build extends Command {
 
     const scan = await scanFS(input)
 
-     console.log('scan result ', scan)
+     console.log('Found images to compress ')
     const compressedRes = await compressImages(scan, output)
 
      for(let p of scan.packs) {
