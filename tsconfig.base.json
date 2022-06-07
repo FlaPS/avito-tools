@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+
+ "esModuleInterop": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "keyofStringsOnly": false,
+    //"useUnknownInCatchVariables": true,
+
+    "preserveConstEnums": true,
+    //"exactOptionalPropertyTypes": true,
+    //"isolatedModules": true,
+    "lib": [
+      "es2016",
+      "dom",
+      "es5",
+      "ES2021",
+      "scripthost",
+      "esnext",
+      "ES2020",
+      "esnext.asynciterable"
+
+    ],
+"target": "ES2015",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "jsx": "react",
+    "pretty": true,
+    "skipLibCheck": true,
+
+    "strict": false,
+    "strictNullChecks": false
+
+    //"allowJs": true
+  }
+}
