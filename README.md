@@ -20,7 +20,7 @@ $ npm install -g avito-cli
 $ avito COMMAND
 running command...
 $ avito (--version)
-avito-cli/0.0.0 linux-x64 node-v16.14.2
+avito-cli/0.0.0 win32-x64 node-v16.14.2
 $ avito --help [COMMAND]
 USAGE
   $ avito COMMAND

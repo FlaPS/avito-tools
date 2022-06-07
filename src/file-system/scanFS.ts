@@ -4,7 +4,7 @@ import {UnPromisify} from '../utils/types'
 
 const scanFS = async (input) => {
 
-    const tree = await DT(input)
+    const tree = await DT(input, {exclude: /DS_Store/})
     const packs = tree.children.filter(c => c.name.includes('пачка'))
     const gradesFolder = tree.children.find(c => c.name ==='source-images')
 

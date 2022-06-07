@@ -19,6 +19,7 @@ const composePack = async (scan: ScanFS, pack: ScanFS['packs'][number], output) 
       const productName = row[0]
       const templateIndex = Number(row[1])
 
+      console.log('handle row ', row ,'in pack', pack)
       const productFile = scan.getProductByName(productName).children[0]
       const templatesFolder = pack.children.find(f => f.children !== undefined && f.name ==='шаблон'+templateIndex)
       const s = sheet
