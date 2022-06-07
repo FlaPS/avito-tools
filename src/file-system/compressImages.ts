@@ -25,7 +25,7 @@ export const compressImages = async (scan: ScanFS, output: string) => {
         return await sharp(from)
           .flatten({ background: '#ffffff' })
           .toFormat('jpg')
-          .toFile(to)
+          .toFile(to.replace('.png', '.jpg'))
       })
       .catch(e => {
         console.error('Can not find artPath '+from, to)
@@ -41,7 +41,7 @@ export const compressImages = async (scan: ScanFS, output: string) => {
           const to = path.join(toDir, f.name)
           console.log('Compress '+f.path + ' to '+to)
         return await handleImage(f.path, to)
-      
+
       }))
       all = [...all, ...results]
     }

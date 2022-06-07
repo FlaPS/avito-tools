@@ -1,6 +1,10 @@
 *-debug.log
 *-error.log
 /.nyc_output
+/.DS_Store
+/avito-catalog
+/avito-output
+/avito-compress
 /dist
 /lib
 /package-lock.json

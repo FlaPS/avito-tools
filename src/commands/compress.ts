@@ -4,32 +4,28 @@ import {compressImages} from '../file-system/compressImages'
 import composePack from '../file-system/composePack'
 
 export default class Build extends Command {
-  static description = 'describe the command here'
+  static description = 'Compress the images from source-images'
 
   static examples = [
-    'avito build ./avito-catalog ./avito-generated',
+    'avito compress ./avito-catalog ./avito-generated',
   ]
 
 
   static args = [
     {name: 'input',  description: 'Исх данные', required: true},
     {name: 'output', description: 'Рабочая папка для записи результата'}
-   ]
+  ]
 
-   public async run(): Promise<void> {
-     const {args} = await this.parse(Build)
+  public async run(): Promise<void> {
+    const {args} = await this.parse(Build)
 
-     const {input, output} = args
+    const {input, output} = args
 
     const scan = await scanFS(input)
 
-     console.log('Found images to compress ')
+    console.log('Found images to compress ')
 
-     for(let p of scan.packs) {
-       console.log('Handle pack '+ p.path)
-       const res1 = await composePack(scan, p, output)
-     }
 
-//     const compressedRes = await compressImages(scan, output)
-   }
+    const compressedRes = await compressImages(scan, output)
+  }
 }

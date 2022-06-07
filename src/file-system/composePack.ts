@@ -19,8 +19,15 @@ const composePack = async (scan: ScanFS, pack: ScanFS['packs'][number], output) 
       const productName = row[0]
       const templateIndex = Number(row[1])
 
-      console.log('handle row ', row ,'in pack', pack)
-      const productFile = scan.getProductByName(productName).children[0]
+      console.log('handle row ', row ,'in pack', pack.name)
+        //  console.log(scan.allProducts)
+      const product = scan.getProductByName(productName)
+      console.log('selected product', product)
+      if(!product) {
+        console.error(productName + ' not found')
+        debugger
+      }
+      const productFile = product.children[0]
       const templatesFolder = pack.children.find(f => f.children !== undefined && f.name ==='шаблон'+templateIndex)
       const s = sheet
       const bgFile = templatesFolder.children.find(f => f.name === '1.png')
@@ -41,7 +48,10 @@ const composePack = async (scan: ScanFS, pack: ScanFS['packs'][number], output) 
       const hProduct = Math.round(Number(row[5])/100 * height)
       const productSharp = await (sharp(productFile.path).resize(
         {width:wProduct,
-        height:hProduct}
+        height:hProduct,
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 0 }
+        }
       ).toBuffer())
 
       const toFileFolder = path.join(output, pack.name, 'Готовое решение',productName +' '+templateIndex)

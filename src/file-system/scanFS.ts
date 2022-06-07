@@ -8,7 +8,9 @@ const scanFS = async (input) => {
     const packs = tree.children.filter(c => c.name.includes('пачка'))
     const gradesFolder = tree.children.find(c => c.name ==='source-images')
 
+
     const grades = gradesFolder.children.map(c => {
+      console.log('c ', c)
       const grade = ({
         ...c,
         gradeName: c.name.split('.')[1].trim(),
@@ -28,7 +30,9 @@ const scanFS = async (input) => {
         tree,
       allProducts,
       getProductByName : name => {
-          return allProducts.find(p => p.productName.toLowerCase() === name.toLowerCase())
+
+          const res = allProducts.find(p => p.productName.toLowerCase() === name.toLowerCase())
+        return res
       }
     } as any
 
