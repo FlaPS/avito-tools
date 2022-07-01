@@ -16,7 +16,7 @@
     "fastify": "^3.29.0",
     "fs-extra": "^10.1.0",
     "nodejs-file-downloader": "^4.9.3",
-    "p-map": "^5.4.0",
+    "p-map": "^5.5.0",
     "ramda": "^0.28.0",
     "read-excel-file": "^5.3.3",
     "sharp": "^0.30.6"
