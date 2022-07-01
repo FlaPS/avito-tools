@@ -4637,10 +4637,10 @@ read-cmd-shim@^3.0.0:
   resolved "https://registry.yarnpkg.com/read-cmd-shim/-/read-cmd-shim-3.0.0.tgz#62b8c638225c61e6cc607f8f4b779f3b8238f155"
   integrity sha512-KQDVjGqhZk92PPNRj9ZEXEuqg8bUobSKRw+q0YQ3TKI5xkce7bUJobL4Z/OtiEbAAv70yEpYIXp4iQ9L8oPVog==
 
-read-excel-file@^5.3.3:
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/read-excel-file/-/read-excel-file-5.3.3.tgz#6d35e1aabe0cfb236ab85f9066fc469a115e2796"
-  integrity sha512-ak3/8c1fA+r2ix1S2ey2PiEEOEoN3QjtwfOQIKE3nlhiLAmKbru6462vhmEibeSgI6e2+Flo/kPPEKHlDXaykw==
+read-excel-file@^5.3.5:
+  version "5.3.5"
+  resolved "https://registry.yarnpkg.com/read-excel-file/-/read-excel-file-5.3.5.tgz#95a509ab5bb24ccb762c8c3c2f40492bc99feb44"
+  integrity sha512-VvK6cBkR/c1u7jJbOcK6SiEQdy2OifV/AcvDe3Rt46Jw8pPuSPbVLL3iXeGvcZgvAk+LnNcFkp3K7+mejui7Tw==
   dependencies:
     "@xmldom/xmldom" "^0.8.2"
     jszip "^3.9.1"
